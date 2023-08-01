@@ -5,6 +5,8 @@
       <map>
         <entry key="app/src/main/res/layout/activity_find_doctor.xml" value="0.19519927536231885" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.2504528985507246" />
+        <entry key="app/src/main/res/layout/activity_lab_test.xml" value="0.23233695652173914" />
+        <entry key="app/src/main/res/layout/activity_lab_test_details.xml" value="0.23233695652173914" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.19519927536231885" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19519927536231885" />
       </map>
