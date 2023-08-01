@@ -35,8 +35,7 @@
             android:layout_marginBottom="12dp"
             android:layout_marginEnd="12dp"
             android:layout_marginStart="12dp"
-            android:layout_centerHorizontal="true"
-    />
+            android:layout_centerHorizontal="true"/>
 
     <GridLayout
             android:layout_width="match_parent"
@@ -48,12 +47,10 @@
 
         <!--FamilyPhysician-->
 
-        <!--dietician-->
-
         <androidx.cardview.widget.CardView
                 android:id="@+id/cardFDFamilyPhysician"
                 android:layout_width="154dp"
-                android:layout_height="202dp"
+                android:layout_height="91dp"
                 android:layout_row="0"
                 android:rowWeight="1"
                 android:layout_column="0"
@@ -87,10 +84,12 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
+        <!--dietician-->
         <androidx.cardview.widget.CardView
                 android:id="@+id/cardFDDietician"
                 android:layout_width="210dp"
-                android:layout_height="202dp"
+                android:layout_height="32dp"
                 android:layout_row="0"
                 android:rowWeight="1"
                 android:layout_column="1"
@@ -126,12 +125,17 @@
         </androidx.cardview.widget.CardView>
 
 
-        <!--FamilyPhysician-->
 
+
+
+
+
+
+        <!--Dentist-->
         <androidx.cardview.widget.CardView
                 android:id="@+id/cardFDDentist"
-                android:layout_width="169dp"
-                android:layout_height="558dp"
+                android:layout_width="160dp"
+                android:layout_height="97dp"
                 android:layout_row="1"
                 android:rowWeight="1"
                 android:layout_column="0"
@@ -152,7 +156,7 @@
                 <ImageView
                         android:layout_width="100dp"
                         android:layout_height="70dp"
-                        android:src="@drawable/dentist"/>
+                        android:src="@drawable/cardiologists"/>
 
                 <TextView android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
@@ -171,7 +175,7 @@
         <androidx.cardview.widget.CardView
                 android:id="@+id/cardFDSurgeon"
                 android:layout_width="169dp"
-                android:layout_height="558dp"
+                android:layout_height="130dp"
                 android:layout_row="1"
                 android:rowWeight="1"
                 android:layout_column="1"
@@ -197,6 +201,87 @@
                 <TextView android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
                           android:text="Surgeon"
+                          android:textAlignment="center"
+                          android:textColor="@color/yellowLight"
+                          android:textStyle="bold"/>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!--about medicines-->
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cardAboutMedicines"
+                android:layout_width="169dp"
+                android:layout_height="426dp"
+                android:layout_row="2"
+                android:rowWeight="1"
+                android:layout_column="0"
+                android:columnWeight-="1"
+                android:layout_gravity="fill"
+                app:cardBackgroundColor="@color/purpleDark"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/surgeon"/>
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="CARDIOLGISTS"
+                          android:textAlignment="center"
+                          android:textColor="@color/yellowLight"
+                          android:textStyle="bold"/>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--Back-->
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cardFDBack"
+                android:layout_width="169dp"
+                android:layout_height="558dp"
+                android:layout_row="2"
+                android:rowWeight="1"
+                android:layout_column="1"
+                android:columnWeight-="1"
+                android:layout_gravity="fill"
+                app:cardBackgroundColor="@color/purpleDark"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/info"/>
+
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="BACk"
                           android:textAlignment="center"
                           android:textColor="@color/yellowLight"
                           android:textStyle="bold"/>
