@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".LabTestBookActivity">
+
+    <TextView
+            android:id="@+id/textViewAppTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="24*7 Health care"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_200" tools:ignore="MissingConstraints"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="@+id/textViewApp"
+            android:layout_marginTop="24dp" android:layout_marginStart="12dp"/>
+    <TextView
+            android:id="@+id/textViewApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PLease fill all details for booking"
+            android:textSize="18sp"
+            android:textColor="@color/yellowLight"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintStart_toStartOf="@+id/editTextTBFullname"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewAppTitle"/>
+    <EditText
+            android:id="@+id/editTextTBContact"
+            android:layout_width="330dp"
+            android:layout_height="43dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Contact Number"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"
+            android:drawablePadding="10dp"
+            app:layout_contstrainEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTBAddress"
+            android:layout_marginTop="40dp" android:layout_marginStart="40dp"/>
+
+    <EditText
+            android:id="@+id/editTextTBPincode"
+            android:layout_width="0dp"
+            android:layout_height="43dp"
+            android:ems="10"
+            android:hint="Pin Code"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:inputType="textPersonName"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"
+            android:drawablePadding="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTBContact"
+            android:layout_marginTop="28dp" tools:ignore="MissingConstraints"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="39dp" android:layout_marginEnd="39dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+            android:id="@+id/editTextTBFullname"
+            android:layout_width="330dp"
+            android:layout_height="43dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Full Name"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"
+            android:drawablePadding="10dp"
+            app:layout_contstrainEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewApp"
+            android:layout_marginTop="20dp" android:layout_marginStart="48dp"/>
+
+
+    <EditText
+            android:id="@+id/editTextTBAddress"
+            android:layout_width="330dp"
+            android:layout_height="43dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Address"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:drawableLeft="@drawable/ic_baseline_security_24"
+            android:textColor="@color/colorWhite"
+            android:textColorHint="@color/colorWhite"
+            android:drawablePadding="10dp"
+            app:layout_contstrainEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewApp"
+            android:layout_marginTop="92dp" android:layout_marginStart="48dp"/>
+
+    <Button
+            android:id="@+id/buttonTBBooking"
+            android:layout_width="0dp"
+            android:layout_height="41dp"
+            android:background="@drawable/btn_bg"
+            android:text="Book"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTBPincode"
+            android:layout_marginTop="28dp"
+            tools:ignore="MissingConstraints"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="42dp" android:layout_marginEnd="42dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

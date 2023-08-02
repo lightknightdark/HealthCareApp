@@ -5,9 +5,14 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/back2"
-        tools:context=".LabTestActivity">
+        android:background="@drawable/background"
+        tools:context=".CartLabActivity">
 
+    <TextView
+            android:text="Select Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView5" tools:layout_editor_absoluteY="571dp"
+            tools:layout_editor_absoluteX="302dp"/>
     <TextView
             android:id="@+id/textViewDDName"
             android:layout_width="wrap_content"
@@ -55,11 +60,31 @@
             android:layout_centerHorizontal_bias="0.01999998"
             app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintVertical_bias="0.167"/>
+
+
     <ListView
             android:id="@+id/listViewCart"
             android:layout_width="wrap_content"
             android:layout_height="350dp"
-            tools:layout_editor_absoluteY="250dp" tools:layout_editor_absoluteX="0dp"/>
+            tools:layout_editor_absoluteY="159dp" tools:layout_editor_absoluteX="0dp"/>
+    <Button
+            android:id="@+id/buttonCartDate"
+            style="?android:spinnerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="27/01/2023"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="264dp" android:layout_marginBottom="84dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <Button
+            android:id="@+id/buttonCartTime"
+            style="?android:spinnerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10:00"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="32dp" android:layout_marginBottom="84dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -70,7 +95,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/listViewCart"
             android:textColor="@color/colorWhite"
-            android:layout_marginBottom="16dp" app:layout_constraintVertical_bias="0.85" android:text="BACK"/>
+            android:layout_marginBottom="16dp" app:layout_constraintVertical_bias="0.85" android:text="Back"/>
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -81,7 +106,18 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/listViewCart"
             android:textColor="@color/colorWhite"
-            android:layout_marginBottom="16dp" app:layout_constraintVertical_bias="0.85" android:text="GO to cart"/>
+            android:layout_marginBottom="16dp" app:layout_constraintVertical_bias="0.85" android:text="check out"/>
+    <TextView
+            android:text="Select Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView2" tools:layout_editor_absoluteY="581dp"
+            tools:layout_editor_absoluteX="71dp"/>
+    <TextView
+            android:text="Total Cost : 200/"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textViewCartTotalCost"
+            tools:layout_editor_absoluteY="539dp"
+            tools:layout_editor_absoluteX="125dp" android:textColor="@color/yellowLight" android:textSize="24sp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

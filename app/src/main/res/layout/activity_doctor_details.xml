@@ -41,7 +41,7 @@
 
 
     <ListView
-            android:id="@+id/listViewDD"
+            android:id="@+id/listViewCart"
             android:layout_width="wrap_content"
             android:layout_height="350dp"
             android:layout_margin="10dp"
@@ -61,9 +61,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.532"
-            android:id="@+id/buttonDDBack"
+            android:id="@+id/buttonCartBack"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/listViewDD"
+            app:layout_constraintTop_toBottomOf="@+id/listViewCart"
             android:textColor="@color/colorWhite"
             android:layout_marginBottom="16dp" app:layout_constraintVertical_bias="0.84"/>
 

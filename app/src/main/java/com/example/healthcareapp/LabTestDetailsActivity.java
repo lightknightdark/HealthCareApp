@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -26,7 +27,7 @@ public class LabTestDetailsActivity extends AppCompatActivity {
         tvPackageName = findViewById(R.id.textViewLDPPackageName);
         tvTotalCost = findViewById(R.id.editTextLDTTotalCost);
         edDetails = findViewById(R.id.editTextLDTTextMultiLine);
-        btnAddToCart =  findViewById(R.id.buttonLTGoToCart);
+        btnAddToCart =  findViewById(R.id.buttonCartCheckOut);
         btnBack = findViewById(R.id.buttonLDTBack);
 
         edDetails.setKeyListener(null);
@@ -53,6 +54,14 @@ public class LabTestDetailsActivity extends AppCompatActivity {
 
 
                 Database db  = new Database(getApplicationContext(), "healthcareapp",null,1);
+
+                if(db.checkCart(username,product)==1){
+                    Toast.makeText(getApplicationContext() , "Product already added", Toast.LENGTH_SHORT).show();
+                }else {
+                    db.addCart(username,product,price,"lab");
+                    Toast.makeText(getApplicationContext() , "record inserted to cart", Toast.LENGTH_SHORT).show();
+                    startActivities(new Intent[]{new Intent(LabTestDetailsActivity.this, LabTestActivity.class)});
+                }
             }
         });
 

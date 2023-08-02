@@ -32,23 +32,23 @@ public class LoginActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivities(new Intent[]{new Intent(LoginActivity.this, HomeActivity.class)});
-//                String username  = edUsername.getText().toString();
-//                String password  = edPassword.getText().toString();
-//                Database db  = new Database(getApplicationContext(),"healthcareapp",null,1);
-//                if(username.length()==0 || password.length()==0){
-//                    Toast.makeText(getApplicationContext(), "PLease all details", Toast.LENGTH_SHORT).show();
-//                }else {
-//                    if(db.login(username,password) == 1){
-//                        Toast.makeText(getApplicationContext(), "Login success", Toast.LENGTH_SHORT).show();
-//                        SharedPreferences sharedPreferences = getSharedPreferences("share_prefs", Context.MODE_PRIVATE);
-//                        SharedPreferences.Editor editor = sharedPreferences.edit();
-//                        editor.putString("username",username);
-//                        editor.apply();
-//                        startActivities(new Intent[]{new Intent(LoginActivity.this, HomeActivity.class)});
-//                    }
-//                    Toast.makeText(getApplicationContext(), "Invalid username and password", Toast.LENGTH_SHORT).show();
-//                }
+              //  startActivities(new Intent[]{new Intent(LoginActivity.this, HomeActivity.class)});
+                String username  = edUsername.getText().toString();
+                String password  = edPassword.getText().toString();
+                Database db  = new Database(getApplicationContext(),"healthcareapp",null,1);
+                if(username.length()==0 || password.length()==0){
+                    Toast.makeText(getApplicationContext(), "PLease all details", Toast.LENGTH_SHORT).show();
+                }else {
+                    if(db.login(username,password) == 1){
+                        Toast.makeText(getApplicationContext(), "Login success", Toast.LENGTH_SHORT).show();
+                        SharedPreferences sharedPreferences = getSharedPreferences("share_prefs", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("username",username);
+                        editor.apply();
+                        startActivities(new Intent[]{new Intent(LoginActivity.this, HomeActivity.class)});
+                    }
+                    Toast.makeText(getApplicationContext(), "Invalid username and password", Toast.LENGTH_SHORT).show();
+                }
 
             }
         });
