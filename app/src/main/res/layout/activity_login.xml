@@ -20,7 +20,7 @@
 
 
     <TextView
-            android:id="@+id/textViewApp"
+            android:id="@+id/textViewBMBPackageName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Login"
@@ -64,7 +64,7 @@
             android:drawablePadding="10dp"
             app:layout_contstrainEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewApp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBMBPackageName"
             android:layout_marginTop="24dp" android:layout_marginStart="40dp"/>
 
 

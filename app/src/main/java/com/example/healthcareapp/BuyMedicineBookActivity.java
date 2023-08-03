@@ -9,9 +9,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import androidx.cardview.widget.CardView;
 
-public class LabTestBookActivity extends AppCompatActivity {
+public class BuyMedicineBookActivity extends AppCompatActivity {
+
     EditText edname, edaddress, edcontact, edpincode;
     Button btnBooking;
 
@@ -19,18 +19,18 @@ public class LabTestBookActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lab_test_book);
+        setContentView(R.layout.activity_buy_medicine_book);
 
-        edname =findViewById(R.id.editTextTBFullname);
-        edaddress = findViewById(R.id.editTextTBAddress);
-        edpincode = findViewById(R.id.editTextTBPincode);
-        edcontact = findViewById(R.id.editTextTBContact);
-        btnBooking = findViewById(R.id.buttonTBBooking);
+        edname =findViewById(R.id.editTextTBMBFullname);
+        edaddress = findViewById(R.id.editTextTBMBAddress);
+        edpincode = findViewById(R.id.editTextTBMBPincode);
+        edcontact = findViewById(R.id.editTextTBMBContact);
+        btnBooking = findViewById(R.id.buttonTBMBBooking);
 
         Intent intent = getIntent();
         String[] price = intent.getStringArrayExtra("price").toString().split(java.util.regex.Pattern.quote(":"));
         String date = intent.getStringExtra("date");
-        String time = intent.getStringExtra("time");
+      //  String time = intent.getStringExtra("time");
 
         btnBooking.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,13 +39,11 @@ public class LabTestBookActivity extends AppCompatActivity {
                 String username  =  sharedPreferences.getString("username","").toString();
                 Database db = new Database(getApplicationContext(),"healthcarapp",null,1);
 
-                db.addOrder(username,edname.getText().toString(),edaddress.getText().toString(),edcontact.getText().toString(),Integer.parseInt(edpincode.getText().toString()),date.toString(),time.toString(),Float.parseFloat(price[1]),"lab");
-                db.removeCart(username,"lab");
-                Toast.makeText(getApplicationContext(),"your booking is done suceesfully",Toast.LENGTH_LONG).show();
-                startActivities(new Intent[]{new Intent(LabTestBookActivity.this, HomeActivity.class)});
+                db.addOrder(username,edname.getText().toString(),edaddress.getText().toString(),edcontact.getText().toString(),Integer.parseInt(edpincode.getText().toString()),date.toString(),"",Float.parseFloat(price[1]),"medicine");
+                db.removeCart(username,"medicine");
+                Toast.makeText(getApplicationContext(),"your booking is done sucesfully",Toast.LENGTH_LONG).show();
+                startActivities(new Intent[]{new Intent(BuyMedicineBookActivity.this, HomeActivity.class)});
             }
         });
-
-
     }
 }

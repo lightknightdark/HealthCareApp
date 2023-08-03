@@ -16,10 +16,10 @@
             android:textSize="34sp"
             android:textStyle="bold"
             android:textColor="@color/purple_200" tools:ignore="MissingConstraints"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="@+id/textViewApp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="@+id/textViewBMBPackageName"
             android:layout_marginTop="24dp" android:layout_marginStart="12dp"/>
     <TextView
-            android:id="@+id/textViewApp"
+            android:id="@+id/textViewBMBPackageName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PLease fill all details for booking"
@@ -85,7 +85,7 @@
             android:drawablePadding="10dp"
             app:layout_contstrainEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewApp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBMBPackageName"
             android:layout_marginTop="20dp" android:layout_marginStart="48dp"/>
 
 
@@ -105,7 +105,7 @@
             android:drawablePadding="10dp"
             app:layout_contstrainEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewApp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBMBPackageName"
             android:layout_marginTop="92dp" android:layout_marginStart="48dp"/>
 
     <Button

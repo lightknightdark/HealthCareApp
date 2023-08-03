@@ -15,14 +15,14 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 
-public class CartLabActivity extends AppCompatActivity {
+public class CartBuyMedicineActivity extends AppCompatActivity {
+
     HashMap<String,String> item;
     ArrayList list;
     SimpleAdapter sa;
     TextView tvTotal;
 
     private DatePickerDialog datePickerDialog;
-    private TimePickerDialog timePickerDialog;
     private Button dateButton, timeButton, btnCheckOut, btnBack;
 
     private String[][] packages = {};
@@ -31,10 +31,9 @@ public class CartLabActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cart_lab);
+        setContentView(R.layout.activity_cart_buy_medicine);
 
         dateButton = findViewById(R.id.buttonBMCartDate);
-        timeButton = findViewById(R.id.buttonCartTime);
         btnCheckOut = findViewById(R.id.buttonBMCartCheckOut);
         btnBack = findViewById(R.id.buttonBMCartBack);
         tvTotal = findViewById(R.id.textViewBMCartTotalCost);
@@ -46,7 +45,7 @@ public class CartLabActivity extends AppCompatActivity {
         Database db = new Database(getApplicationContext(),"healthcarapp",null,1);
 
         float totalAmount = 0;
-        ArrayList dbData = db.getCartData(username,"lab");
+        ArrayList dbData = db.getCartData(username,"medicine");
         Toast.makeText(getApplicationContext(), ""+dbData, Toast.LENGTH_SHORT).show();
 
         packages =  new String[dbData.size()][];
@@ -89,7 +88,7 @@ public class CartLabActivity extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivities(new Intent[]{new Intent(CartLabActivity.this, LabTestActivity.class)});
+                startActivities(new Intent[]{new Intent(CartBuyMedicineActivity.this, BuyMedicineActivity.class)});
             }
         });
 
@@ -101,34 +100,16 @@ public class CartLabActivity extends AppCompatActivity {
             }
         });
 
-        initTimePicker();
-        timeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                timePickerDialog.show();
-            }
-        });
-
-
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivities(new Intent[]{new Intent(CartLabActivity.this, LabTestActivity.class)});
-            }
-        });
-
         btnCheckOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivities(new Intent[]{new Intent(CartLabActivity.this, LabTestBookActivity.class)});
-                Intent it = new Intent(CartLabActivity.this, LabTestDetailsActivity.class);
+
+                Intent it = new Intent(CartBuyMedicineActivity.this, BuyMedicineBookActivity.class);
                 it.putExtra("text1",tvTotal.getText());
                 it.putExtra("text2",dateButton.getText());
-                it.putExtra("text3",timeButton.getText());
                 startActivity(it);
             }
         });
-
     }
 
     private void initDatePicker(){
@@ -147,23 +128,5 @@ public class CartLabActivity extends AppCompatActivity {
         int style = AlertDialog.THEME_HOLO_DARK;
         datePickerDialog =  new DatePickerDialog(this, style,dateSetListener,year,month,day);
         datePickerDialog.getDatePicker().setMinDate(cal.getTimeInMillis()+86400000);
-    }
-
-    private void initTimePicker(){
-        TimePickerDialog.OnTimeSetListener timeSetListener = new TimePickerDialog.OnTimeSetListener() {
-            @Override
-            public void onTimeSet(TimePicker timePicker, int i, int i1) {
-                timeButton.setText(i+":"+i1);
-            }
-
-        };
-        Calendar cal  = Calendar.getInstance();
-        int hrs = cal.get(Calendar.HOUR);
-        int mins = cal.get(Calendar.MINUTE);
-
-
-        int style = AlertDialog.THEME_HOLO_DARK;
-        timePickerDialog =  new TimePickerDialog(this, style,timeSetListener,hrs,mins,true);
-
     }
 }

@@ -41,7 +41,7 @@
 
 
     <TextView
-            android:id="@+id/textViewDDTitle3"
+            android:id="@+id/textViewBMCartTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Lab test and package"
@@ -56,7 +56,7 @@
             app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintVertical_bias="0.167"/>
     <ListView
-            android:id="@+id/listViewCart"
+            android:id="@+id/listViewBMCart"
             android:layout_width="wrap_content"
             android:layout_height="350dp"
             tools:layout_editor_absoluteY="250dp" tools:layout_editor_absoluteX="0dp"/>
@@ -66,9 +66,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.891"
-            android:id="@+id/buttonCartBack"
+            android:id="@+id/buttonBMCartBack"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/listViewCart"
+            app:layout_constraintTop_toBottomOf="@+id/listViewBMCart"
             android:textColor="@color/colorWhite"
             android:layout_marginBottom="16dp" app:layout_constraintVertical_bias="0.85" android:text="BACK"/>
     <Button
@@ -77,9 +77,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.105"
-            android:id="@+id/buttonCartCheckOut"
+            android:id="@+id/buttonBMCartCheckOut"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/listViewCart"
+            app:layout_constraintTop_toBottomOf="@+id/listViewBMCart"
             android:textColor="@color/colorWhite"
             android:layout_marginBottom="16dp" app:layout_constraintVertical_bias="0.85" android:text="GO to cart"/>
 

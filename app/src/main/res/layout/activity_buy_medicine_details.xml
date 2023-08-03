@@ -4,15 +4,10 @@
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
+        android:background="@drawable/back1"
         android:layout_height="match_parent"
-        android:background="@drawable/background"
-        tools:context=".CartLabActivity">
+        tools:context=".BuyMedicineActivityDetailsActivity">
 
-    <TextView
-            android:text="Select Time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView5" tools:layout_editor_absoluteY="571dp"
-            tools:layout_editor_absoluteX="302dp"/>
     <TextView
             android:id="@+id/textViewDDName"
             android:layout_width="wrap_content"
@@ -29,10 +24,10 @@
 
 
     <TextView
-            android:id="@+id/textViewDDTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Deliver Location : Pune"
+            android:id="@+id/textViewBMDPackageName"
+            android:layout_width="299dp"
+            android:layout_height="368dp"
+            android:text="fvdjkbvkdfj"
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
             android:textSize="16sp"
@@ -41,15 +36,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_centerHorizontal_bias="0.01999998"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintVertical_bias="0.1"/>
-
-
+            app:layout_constraintHorizontal_bias="0.541"
+            app:layout_constraintVertical_bias="0.498"/>
     <TextView
-            android:id="@+id/textViewBMCartTitle"
+            android:id="@+id/textViewBMTTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lab test and package"
+            android:text="Buy Medicine"
             android:textColor="@color/colorWhite"
             android:textStyle="bold"
             android:textSize="20sp"
@@ -62,62 +55,58 @@
             app:layout_constraintVertical_bias="0.167"/>
 
 
-    <ListView
-            android:id="@+id/listViewBMCart"
-            android:layout_width="wrap_content"
-            android:layout_height="350dp"
-            tools:layout_editor_absoluteY="159dp" tools:layout_editor_absoluteX="0dp"/>
-    <Button
-            android:id="@+id/buttonBMCartDate"
-            style="?android:spinnerStyle"
+    <EditText
+            android:id="@+id/editTextBMTMultiLine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="27/01/2023"
+            android:text="Buy Medicine"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginEnd="264dp" android:layout_marginBottom="84dp"
-            app:layout_constraintEnd_toEndOf="parent"/>
-    <Button
-            android:id="@+id/buttonCartTime"
-            style="?android:spinnerStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="10:00"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginEnd="32dp" android:layout_marginBottom="84dp"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_centerHorizontal_bias="0.01999998"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintVertical_bias="0.167"/>
+
+
+
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.891"
-            android:id="@+id/buttonBMCartBack"
+            android:id="@+id/buttonBMDBack"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/listViewBMCart"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBMDPackageName"
             android:textColor="@color/colorWhite"
-            android:layout_marginBottom="16dp" app:layout_constraintVertical_bias="0.85" android:text="Back"/>
+            android:layout_marginBottom="16dp" app:layout_constraintVertical_bias="0.85" android:text="BACK"/>
+
+
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintHorizontal_bias="0.105"
-            android:id="@+id/buttonBMCartCheckOut"
+            android:id="@+id/buttonCartBMDAddToCart"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/listViewBMCart"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBMDPackageName"
             android:textColor="@color/colorWhite"
-            android:layout_marginBottom="16dp" app:layout_constraintVertical_bias="0.85" android:text="check out"/>
-    <TextView
-            android:text="Select Date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textView2" tools:layout_editor_absoluteY="581dp"
-            tools:layout_editor_absoluteX="71dp"/>
-    <TextView
-            android:text="Total Cost : 200/"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/textViewBMCartTotalCost"
-            tools:layout_editor_absoluteY="539dp"
-            tools:layout_editor_absoluteX="125dp" android:textColor="@color/yellowLight" android:textSize="24sp"/>
+            android:layout_marginBottom="16dp" app:layout_constraintVertical_bias="0.85" android:text="Add to cart"/>
 
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewBMDTotalCost"
+            android:textSize="24dp"
+            android:textColor="@color/yellowLight"
+            android:text="texview"
+            app:layout_constraintTop_toBottomOf="@+id/textViewBMDPackageName"
+            tools:layout_editor_absoluteX="161dp" android:layout_marginTop="28dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

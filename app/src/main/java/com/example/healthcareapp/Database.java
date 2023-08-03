@@ -127,5 +127,39 @@ public class Database extends SQLiteOpenHelper {
         db.close();
     }
 
+    public ArrayList getOrderData(String username){
+        ArrayList<String> arr = new ArrayList<>();
+        SQLiteDatabase db = getReadableDatabase();
+        String str[] = new String[1];
+        str[0] = username;
+        Cursor c =db.rawQuery("select * from orderplace where usernaem = ?",str);
+        if(c.moveToFirst()){
+            do{
+                arr.add(c.getString(1)+"$"+c.getString(2)+"$"+c.getString(3)+"$"+c.getString(4)+"$"+c.getString(5)+"$"+c.getString(6)+"$");
+            }while (c.moveToNext());
+        }
+        db.close();
+        return arr;
+    }
+
+    public  int checkAppointExistmentExists(String username, String fullname, String address, String contact,  String date, String time, float price,String otype){
+        int result = 0;
+        String str[] = new String[6];
+        str[0] = username;
+        str[1] = fullname;
+        str[2] = address;
+        str[3] = contact;
+        str[4] = date;
+        str[5] = time;
+        SQLiteDatabase db = getReadableDatabase();
+        Cursor c =db.rawQuery("select * from orderplace where usernaem = ? and fullname = ? and address = ? and contactno = ? and date = ? and time = ?",str);
+        if(c.moveToFirst()){
+           result = 1;
+        }
+        db.close();
+        return result;
+
+    }
+
 
 }
